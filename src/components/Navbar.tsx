@@ -39,7 +39,7 @@ export function Navbar() {
         >
           <a href="#hero" className="group flex flex-col leading-tight">
             <span className="font-display font-bold text-sm text-white/90 group-hover:text-white transition-colors">Lucas Magalhães</span>
-            <span className="text-[10px] text-muted-foreground font-mono tracking-wide">Analista de Sistemas e Inovação Jr · Full Stack Developer</span>
+            <span className="hidden sm:block text-[10px] text-muted-foreground font-mono tracking-wide">Analista de Sistemas e Inovação Jr · Full Stack Dev</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-1">

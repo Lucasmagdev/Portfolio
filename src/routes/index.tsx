@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { MobileShowcase } from "@/components/sections/MobileShowcase";
 import { DoctorShowcase } from "@/components/sections/DoctorShowcase";
 import { CodexyShowcase } from "@/components/sections/CodexyShowcase";
+import { ImperialShowcase } from "@/components/sections/ImperialShowcase";
 import { Experience } from "@/components/sections/Experience";
 import { Certifications } from "@/components/sections/Certifications";
 import { Education } from "@/components/sections/Education";
@@ -34,6 +35,7 @@ function Index() {
         <CodexyShowcase />
         <MobileShowcase />
         <DoctorShowcase />
+        <ImperialShowcase />
         <Experience />
         <Education />
         <Differentials />

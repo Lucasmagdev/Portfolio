@@ -67,7 +67,7 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="mt-6 flex items-center gap-1">
+          <div className="mt-6 flex flex-wrap items-center gap-1">
             <a href={socials.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-white hover:bg-white/5 transition-all">
               <Github size={15} /> GitHub
             </a>
@@ -86,7 +86,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="relative flex justify-center lg:justify-end"
+          className="relative hidden lg:flex justify-center lg:justify-end"
         >
           {/* glow */}
           <div className="absolute inset-0 rounded-full bg-primary/20 blur-[80px] scale-75" />

@@ -3,15 +3,15 @@ import { Check } from "lucide-react";
 import { Section } from "@/components/Section";
 
 const features = [
-  "Diário de obras digital",
-  "Pontos e comunicados internos",
-  "Registro de fatos observados",
-  "Painel administrativo web",
-  "Indicação de obras e oportunidades",
-  "Cursos e provas integrados",
+  "Catálogo público de carnes + carrinho + checkout",
+  "Painel admin: pedidos, clientes, produtos, KPIs",
+  "Autenticação por papel (admin / cliente)",
+  "Integração WhatsApp via Z-API por mudança de status",
+  "Geração de documentos PDF de pedidos",
+  "Calculadora de churrasco",
 ];
 
-const stack = ["React", "PWA", "Node.js", "MySQL", "Linux", "Express"];
+const stack = ["React 18", "TypeScript", "Supabase", "TanStack Query", "Tailwind", "shadcn/ui", "Z-API", "jsPDF"];
 
 function PhoneMockup() {
   return (
@@ -23,7 +23,7 @@ function PhoneMockup() {
       <div className="relative rounded-[40px] bg-[#141414] p-2.5 shadow-[0_30px_60px_rgba(0,0,0,0.6),inset_0_0_0_1px_rgba(255,255,255,0.08)]">
         <div className="absolute top-2.5 left-1/2 -translate-x-1/2 h-5 w-[70px] rounded-full bg-[#0a0a0a] z-10" />
         <div className="relative rounded-[30px] overflow-hidden bg-[#0d0d0d] aspect-[9/19.5]">
-          <img src="/app-gontijo.jpg" alt="App mobile" className="w-full h-full object-cover object-top" />
+          <img src="/imperial.jpg" alt="Imperial mobile" className="w-full h-full object-cover object-top" />
           <div className="absolute top-0 inset-x-0 h-6 bg-gradient-to-b from-black/40 to-transparent pointer-events-none" />
         </div>
         <div className="absolute -right-[3px] top-20 h-8 w-1 rounded-full bg-white/10" />
@@ -43,7 +43,6 @@ function BrowserMockup() {
       className="relative flex-1 min-w-0"
     >
       <div className="relative rounded-xl bg-[#141414] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.5),inset_0_0_0_1px_rgba(255,255,255,0.08)]">
-        {/* browser bar */}
         <div className="flex items-center gap-2 px-4 py-3 bg-[#1a1a1a] border-b border-white/[0.06]">
           <div className="flex gap-1.5">
             <div className="h-2.5 w-2.5 rounded-full bg-red-500/60" />
@@ -51,31 +50,25 @@ function BrowserMockup() {
             <div className="h-2.5 w-2.5 rounded-full bg-green-500/60" />
           </div>
           <div className="flex-1 mx-3 px-3 py-1 rounded-md bg-white/[0.05] text-[10px] font-mono text-white/30 truncate">
-            app.gontijo.com.br/admin
+            imperialflow.com.br/admin
           </div>
         </div>
-        {/* screen */}
         <div className="aspect-[16/10] overflow-hidden">
-          <img
-            src="/appgontijoweb.png"
-            alt="Painel administrativo"
-            className="w-full h-full object-cover object-left-top"
-          />
+          <img src="/imperial-web.jpg" alt="Imperial admin web" className="w-full h-full object-cover object-left-top" />
         </div>
       </div>
     </motion.div>
   );
 }
 
-export function MobileShowcase() {
+export function ImperialShowcase() {
   return (
     <Section
-      id="app-gontijo"
-      eyebrow="Mobile PWA + Admin Web"
+      id="imperial"
+      eyebrow="E-commerce · Enterprise"
       title={
         <>
-          App{" "}
-          <span className="text-gradient-primary">Gontijo Fundações</span>
+          <span className="text-gradient-primary">Imperial Flow Gold</span>
         </>
       }
     >
@@ -94,7 +87,7 @@ export function MobileShowcase() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-muted-foreground text-base leading-relaxed">
-            Aplicativo PWA para a equipe operacional da Gontijo Fundações — substitui processos manuais por fluxos digitais acessíveis de qualquer celular, com painel administrativo web completo.
+            Sistema web completo para açougue e distribuidora de carnes. Área pública para clientes com catálogo, carrinho e checkout — painel admin com pedidos, clientes, produtos e KPIs.
           </p>
           <ul className="mt-6 space-y-2.5">
             {features.map((f) => (
@@ -116,15 +109,15 @@ export function MobileShowcase() {
           className="flex flex-col gap-6"
         >
           <div className="glass-card rounded-2xl p-5">
-            <div className="text-xs font-mono uppercase tracking-widest text-primary mb-3">Mobile PWA</div>
+            <div className="text-xs font-mono uppercase tracking-widest text-primary mb-3">App Mobile</div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Interface otimizada para celular. Funciona offline, instalável como app nativo. Usado diariamente pelos colaboradores em campo.
+              Interface responsiva otimizada para celular. Clientes acessam o catálogo, montam carrinho e finalizam pedidos diretamente pelo smartphone.
             </p>
           </div>
           <div className="glass-card rounded-2xl p-5">
-            <div className="text-xs font-mono uppercase tracking-widest text-primary mb-3">Admin Web</div>
+            <div className="text-xs font-mono uppercase tracking-widest text-primary mb-3">Painel Admin</div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Painel administrativo completo para gestores: visualização de diários, relatórios, controle de usuários e configurações do sistema.
+              Dashboard com KPIs, gestão completa de pedidos, clientes e produtos, upload de fotos e integração WhatsApp para notificações automáticas.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
