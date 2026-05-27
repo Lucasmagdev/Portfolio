@@ -15,6 +15,9 @@ export default defineConfig({
     tailwindcss(),
     tsConfigPaths(),
   ],
+  ssr: {
+    noExternal: ["lucide-react"],
+  },
   server: {
     port: 8080,
     host: true,
