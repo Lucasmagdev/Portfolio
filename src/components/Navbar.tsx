@@ -37,15 +37,9 @@ export function Navbar() {
             scrolled ? "glass-card shadow-2xl" : ""
           }`}
         >
-          <a href="#hero" className="flex items-center gap-2 group">
-            <div className="relative h-9 w-9 rounded-xl bg-gradient-primary grid place-items-center font-bold text-white shadow-[0_0_20px_oklch(0.58_0.22_27/0.5)]">
-              LE
-              <div className="absolute inset-0 rounded-xl bg-primary/40 blur-xl -z-10 group-hover:blur-2xl transition-all" />
-            </div>
-            <div className="hidden sm:block">
-              <div className="font-display font-semibold text-sm leading-tight">Lucas Estevam</div>
-              <div className="text-[10px] text-muted-foreground font-mono tracking-wider uppercase">Full Stack · Sistemas</div>
-            </div>
+          <a href="#hero" className="group flex flex-col leading-tight">
+            <span className="font-display font-bold text-sm text-white/90 group-hover:text-white transition-colors">Lucas Magalhães</span>
+            <span className="text-[10px] text-muted-foreground font-mono tracking-wide">Analista de Sistemas e Inovação Jr · Full Stack Developer</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-1">

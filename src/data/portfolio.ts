@@ -1,7 +1,7 @@
 import {
   Code2, Server, Database, Cloud, Terminal, GitBranch, TestTube,
   Layers, Boxes, Cpu, Workflow, Brain, Briefcase, GraduationCap,
-  Award, Network, Sparkles,
+  Award, Network, Sparkles, Building2, ClipboardList, BarChart3,
 } from "lucide-react";
 
 export const heroStats = [
@@ -72,6 +72,17 @@ export const projects = [
     accent: "from-orange-500/30 to-red-500/20",
     icon: Workflow,
   },
+  {
+    title: "DoctorChatBot",
+    tag: "SaaS · IA",
+    description: "Plataforma SaaS com agenda inteligente para médicos. Chatbot automatiza agendamentos, confirmações e comunicação com pacientes via WhatsApp.",
+    features: ["Agenda inteligente", "Chatbot IA", "WhatsApp", "Confirmações automáticas", "Multi-clínica"],
+    stack: ["React", "Node.js", "IA", "WhatsApp API"],
+    accent: "from-blue-600/30 to-cyan-500/20",
+    icon: Brain,
+    screenshot: "/doctorchatbot.jpg",
+    link: "https://doctorchatbot.com.br",
+  },
 ];
 
 export const experiences = [
@@ -108,20 +119,38 @@ export const certifications = [
 ];
 
 export const education = [
-  { school: "PUC Minas", course: "Análise e Desenvolvimento de Sistemas", icon: GraduationCap },
-  { school: "IFMG", course: "Administração", icon: GraduationCap },
-  { school: "SENAI", course: "Programação Web", icon: GraduationCap },
+  {
+    school: "PUC Minas",
+    course: "Análise e Desenvolvimento de Sistemas",
+    period: "2024 — Cursando",
+    description: "Graduação focada em engenharia de software, arquitetura de sistemas, banco de dados, redes e desenvolvimento full stack.",
+    icon: GraduationCap,
+  },
+  {
+    school: "SENAI",
+    course: "Programação Web",
+    period: "2023 — 2024",
+    description: "Formação técnica em desenvolvimento web: HTML, CSS, JavaScript, lógica de programação e projetos práticos de interface.",
+    icon: GraduationCap,
+  },
+  {
+    school: "IFMG",
+    course: "Administração",
+    period: "2020 — 2022",
+    description: "Formação em gestão de processos, finanças, logística e administração de organizações — base para visão de negócio aplicada à tecnologia.",
+    icon: GraduationCap,
+  },
 ];
 
 export const differentials = [
-  { title: "Produto", desc: "Visão de produto end-to-end", icon: Boxes },
-  { title: "Arquitetura", desc: "Decisões de longo prazo", icon: Network },
-  { title: "Automação", desc: "Eficiência operacional", icon: Workflow },
-  { title: "IA", desc: "ML aplicado a negócio", icon: Brain },
-  { title: "Negócio", desc: "Tecnologia com ROI claro", icon: Briefcase },
-  { title: "SaaS", desc: "Multi-tenant, escalável", icon: Sparkles },
-  { title: "Infraestrutura", desc: "Linux, VPS, deploy", icon: Server },
-  { title: "Processos", desc: "Mapeamento e digitalização", icon: GitBranch },
+  { title: "Sistemas Corporativos", desc: "CRM • OS • Inventário • Operações", icon: Building2 },
+  { title: "Diário de Obras", desc: "Digitalização e gestão operacional", icon: ClipboardList },
+  { title: "Automação", desc: "Fluxos • IA • Integrações", icon: Workflow },
+  { title: "Arquitetura", desc: "APIs • Escalabilidade • Domínio", icon: Network },
+  { title: "SaaS", desc: "Produtos multiempresa", icon: Sparkles },
+  { title: "Dados", desc: "KPIs • Dashboards • Métricas", icon: BarChart3 },
+  { title: "Infraestrutura", desc: "Deploy • VPS • Linux", icon: Server },
+  { title: "IA Aplicada", desc: "Assistentes • Agentes • Produtividade", icon: Brain },
 ];
 
 export const socials = {

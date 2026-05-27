@@ -7,8 +7,7 @@ export function Differentials() {
     <Section
       id="diferencial"
       eyebrow="Além do código"
-      title={<>Tecnologia conectada a <span className="text-gradient-primary">produto e negócio</span></>}
-      description="Engenharia é meio, não fim. Penso em arquitetura, automação, IA e infraestrutura como peças de um mesmo sistema: gerar valor."
+      title={<span className="text-gradient-primary">Tecnologias</span>}
     >
       <div className="relative">
         {/* connecting lines svg */}

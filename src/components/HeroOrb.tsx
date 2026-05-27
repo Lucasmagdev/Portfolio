@@ -56,13 +56,6 @@ export function HeroOrb() {
         );
       })}
 
-      {/* center label */}
-      <div className="absolute inset-0 grid place-items-center pointer-events-none">
-        <div className="text-center">
-          <div className="font-mono text-[10px] tracking-[0.3em] text-white/60 uppercase">System</div>
-          <div className="font-display font-bold text-2xl text-white mt-1">LE.dev</div>
-        </div>
-      </div>
     </div>
   );
 }

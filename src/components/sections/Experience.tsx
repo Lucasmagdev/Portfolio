@@ -7,8 +7,7 @@ export function Experience() {
     <Section
       id="experiencia"
       eyebrow="Trajetória"
-      title={<>Da operação <span className="text-gradient-primary">à engenharia</span></>}
-      description="Construindo carreira ao lado da execução. Cada cargo foi um degrau para entender pessoas, processos e tecnologia."
+      title={<span className="text-gradient-primary">Experiência</span>}
     >
       <div className="relative max-w-3xl mx-auto">
         <div className="absolute left-4 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-px bg-gradient-to-b from-primary via-primary/30 to-transparent" />
