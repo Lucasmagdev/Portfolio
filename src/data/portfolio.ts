@@ -125,7 +125,8 @@ export const differentials = [
 ];
 
 export const socials = {
-  github: "https://github.com/lucasestevam",
-  linkedin: "https://linkedin.com/in/lucasestevam",
-  email: "mailto:contato@lucasestevam.dev",
+  github: "https://github.com/Lucasmagdev",
+  linkedin: "https://www.linkedin.com/in/lucas-estevam7",
+  email: "mailto:lucasemb999@gmail.com",
+  whatsapp: "https://wa.me/5531991666106",
 };

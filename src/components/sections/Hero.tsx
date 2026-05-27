@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { Particles } from "@/components/Particles";
 import { HeroOrb } from "@/components/HeroOrb";
-import { Counter } from "@/components/Counter";
-import { heroStats, socials } from "@/data/portfolio";
+import { socials } from "@/data/portfolio";
 
 export function Hero() {
   return (
@@ -22,26 +21,27 @@ export function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-mono uppercase tracking-[0.2em] mb-6"
           >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-            </span>
-            Disponível para novos projetos
+            <a
+              href={socials.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-mono uppercase tracking-[0.2em] mb-6 hover:bg-white/10 transition-all"
+            >
+              <MessageCircle size={12} className="text-emerald-400" />
+              Orçamentos via WhatsApp
+            </a>
           </motion.div>
 
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05]">
-            <span className="text-gradient">Transformando</span>
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+            <span className="text-gradient-primary">Analista de Sistemas</span>
             <br />
-            <span className="text-gradient-primary">processos</span>{" "}
-            <span className="text-gradient">em</span>
+            <span className="text-gradient">e Inovação Jr</span>
             <br />
-            <span className="text-gradient">sistemas.</span>
+            <span className="text-white/80 text-3xl sm:text-4xl lg:text-5xl font-semibold">Full Stack Developer</span>
           </h1>
 
           <div className="mt-6 space-y-1 text-muted-foreground text-base md:text-lg">
-            <p className="text-white/90 font-medium">Analista de Sistemas e Inovação Jr · Full Stack Developer</p>
             <p>Construção de sistemas corporativos, automações e produtos SaaS.</p>
           </div>
 
@@ -51,8 +51,16 @@ export function Hero() {
 
           <div className="mt-9 flex flex-wrap gap-3">
             <a
-              href="#projetos"
+              href={socials.whatsapp}
+              target="_blank"
+              rel="noreferrer"
               className="group inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-primary font-medium text-white shadow-[0_0_30px_oklch(0.58_0.22_27/0.4)] hover:shadow-[0_0_50px_oklch(0.58_0.22_27/0.7)] transition-all"
+            >
+              <MessageCircle size={16} /> WhatsApp
+            </a>
+            <a
+              href="#projetos"
+              className="group inline-flex items-center gap-2 px-5 py-3 rounded-xl glass-card hover:bg-white/5 transition-all"
             >
               Ver Projetos
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -64,19 +72,8 @@ export function Hero() {
               <Linkedin size={16} /> LinkedIn
             </a>
             <a href={socials.email} className="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass-card hover:bg-white/5 transition-all">
-              <Mail size={16} /> Contato
+              <Mail size={16} /> Email
             </a>
-          </div>
-
-          <div className="mt-12 grid grid-cols-3 gap-4 max-w-md">
-            {heroStats.map((s) => (
-              <div key={s.label} className="glass-card rounded-2xl p-4">
-                <div className="font-display text-3xl md:text-4xl font-bold text-gradient-primary">
-                  <Counter to={s.value} suffix={s.suffix} />
-                </div>
-                <div className="mt-1 text-[11px] uppercase tracking-wider text-muted-foreground">{s.label}</div>
-              </div>
-            ))}
           </div>
         </motion.div>
 

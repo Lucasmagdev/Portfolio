@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, MessageCircle } from "lucide-react";
 import { socials } from "@/data/portfolio";
 
 export function Footer() {
@@ -21,8 +21,11 @@ export function Footer() {
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          <a href={socials.email} className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-primary font-medium text-white shadow-[0_0_30px_oklch(0.58_0.22_27/0.5)] hover:shadow-[0_0_50px_oklch(0.58_0.22_27/0.8)] transition-all">
-            <Mail size={16} /> contato@lucasestevam.dev
+          <a href={socials.whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-primary font-medium text-white shadow-[0_0_30px_oklch(0.58_0.22_27/0.5)] hover:shadow-[0_0_50px_oklch(0.58_0.22_27/0.8)] transition-all">
+            <MessageCircle size={16} /> +55 31 99166-6106
+          </a>
+          <a href={socials.email} className="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass-card hover:bg-white/5 transition-all">
+            <Mail size={16} /> lucasemb999@gmail.com
           </a>
           <a href={socials.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass-card hover:bg-white/5 transition-all">
             <Github size={16} /> GitHub
