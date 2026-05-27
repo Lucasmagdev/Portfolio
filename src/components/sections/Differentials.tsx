@@ -6,7 +6,6 @@ export function Differentials() {
   return (
     <Section
       id="diferencial"
-      eyebrow="Além do código"
       title={<span className="text-gradient-primary">Tecnologias</span>}
     >
       <div className="relative">
