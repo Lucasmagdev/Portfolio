@@ -1,29 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/sections/Hero";
+import { About } from "@/components/sections/About";
+import { Stack } from "@/components/sections/Stack";
+import { Projects } from "@/components/sections/Projects";
+import { Experience } from "@/components/sections/Experience";
+import { Certifications } from "@/components/sections/Certifications";
+import { Education } from "@/components/sections/Education";
+import { Differentials } from "@/components/sections/Differentials";
+import { Footer } from "@/components/sections/Footer";
+import { BackToTop } from "@/components/BackToTop";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Lucas Estevam — Analista de Sistemas & Full Stack Developer" },
+      { name: "description", content: "Portfólio de Lucas Estevam — Analista de Sistemas e Inovação Jr. Construção de sistemas corporativos, automações e produtos SaaS com React, Node.js e TypeScript." },
+      { property: "og:title", content: "Lucas Estevam — Full Stack & Sistemas" },
+      { property: "og:description", content: "Transformando processos em sistemas. Aplicações web, integrações e produtos SaaS." },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="relative min-h-screen text-foreground overflow-x-hidden">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Stack />
+        <Projects />
+        <Experience />
+        <Certifications />
+        <Education />
+        <Differentials />
+      </main>
+      <Footer />
+      <BackToTop />
     </div>
   );
 }
