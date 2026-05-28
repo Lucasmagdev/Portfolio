@@ -72,12 +72,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lucas Estevam — Full Stack & Sistemas" },
-      { name: "description", content: "Portfólio premium de Lucas Estevam — Analista de Sistemas e Inovação Jr & Full Stack Developer." },
-      { name: "author", content: "Lucas Estevam" },
+      { title: "Lucas Magalhães — Full Stack & Sistemas" },
+      { name: "description", content: "Portfólio de Lucas Magalhães — Analista de Sistemas Full Stack. Sistemas corporativos, automações e produtos SaaS." },
+      { name: "author", content: "Lucas Magalhães" },
       { name: "theme-color", content: "#080B12" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Lucas Estevam" },
+      { property: "og:site_name", content: "Lucas Magalhães" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

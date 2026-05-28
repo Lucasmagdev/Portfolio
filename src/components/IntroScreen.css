@@ -1,0 +1,98 @@
+.intro-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #080b12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: opacity;
+}
+
+.intro-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.intro-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  pointer-events: none;
+}
+
+.intro-title-group {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.intro-title {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(2rem, 7vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(100deg, #ffffff 0%, #e52222 30%, #ffffff 55%, #e52222 80%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.intro-underline {
+  margin-top: 10px;
+  height: 1px;
+  width: 0;
+  background: linear-gradient(90deg, transparent 0%, #e52222 25%, #ff4444 60%, transparent 100%);
+  box-shadow: 0 0 10px rgba(229, 34, 34, 0.8), 0 0 24px rgba(229, 34, 34, 0.4);
+  transition: width 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.intro-underline--on {
+  width: 100%;
+}
+
+.intro-tagline {
+  margin-top: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.58rem, 1.4vw, 0.78rem);
+  letter-spacing: 0.42em;
+  color: rgba(255, 255, 255, 0.32);
+  text-transform: uppercase;
+  min-height: 1.4em;
+  display: flex;
+  align-items: center;
+}
+
+.intro-cursor {
+  display: inline-block;
+  width: 1.5px;
+  height: 0.85em;
+  background: #d94f25;
+  margin-left: 3px;
+  vertical-align: middle;
+  animation: intro-blink 0.65s step-end infinite;
+  box-shadow: 0 0 7px rgba(217, 79, 37, 0.9);
+}
+
+@keyframes intro-blink {
+  50% { opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .intro-title {
+    letter-spacing: 0.07em;
+    font-size: clamp(1.6rem, 10vw, 2.8rem);
+  }
+  .intro-tagline {
+    letter-spacing: 0.22em;
+  }
+}
