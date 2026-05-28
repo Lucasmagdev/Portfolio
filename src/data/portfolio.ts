@@ -87,25 +87,18 @@ export const projects = [
 
 export const experiences = [
   {
-    role: "Analista de Sistemas e Inovação Jr",
-    company: "Gontijo Fundações",
-    period: "2025 — Atual",
-    description: "Desenvolvimento de sistemas corporativos, automações operacionais e transformação digital. Arquitetura full stack, infraestrutura Linux e integrações.",
+    role: "Analista de Sistemas Full Stack",
+    company: "Gontijo Fundações S.A.",
+    period: "Out 2025 — Atual",
+    description: "Desenvolvimento full stack com React, Node.js e integrações via APIs. Deploy e gerenciamento em DigitalOcean Droplets. Automações com IA, mapeamento de processos internos, sistemas operacionais e digitalização de rotinas da empresa.",
     icon: Cpu,
   },
   {
-    role: "Técnico Administrativo",
-    company: "Gontijo Fundações",
-    period: "2023 — 2025",
-    description: "Operações administrativas, processos internos e primeiros projetos de automação que abriram caminho para a área de tecnologia.",
+    role: "Técnico Administrativo IV",
+    company: "Gontijo Fundações S.A.",
+    period: "Dez 2023 — Out 2025",
+    description: "Análise de dados e relatórios para tomada de decisão. Mapeamento e melhoria de processos (PDCA), indicadores de performance operacional e apoio na digitalização de rotinas internas.",
     icon: Workflow,
-  },
-  {
-    role: "Auxiliar de Escritório",
-    company: "Maurício Imóveis",
-    period: "2022 — 2023",
-    description: "Rotinas administrativas, controle documental e suporte operacional ao time comercial.",
-    icon: Briefcase,
   },
 ];
 
@@ -122,22 +115,22 @@ export const education = [
   {
     school: "PUC Minas",
     course: "Análise e Desenvolvimento de Sistemas",
-    period: "2024 — Cursando",
-    description: "Graduação focada em engenharia de software, arquitetura de sistemas, banco de dados, redes e desenvolvimento full stack.",
-    icon: GraduationCap,
-  },
-  {
-    school: "SENAI",
-    course: "Programação Web",
-    period: "2023 — 2024",
-    description: "Formação técnica em desenvolvimento web: HTML, CSS, JavaScript, lógica de programação e projetos práticos de interface.",
+    period: "2025 — Cursando",
+    description: "Graduação em ADS com foco em engenharia de software, arquitetura de sistemas, banco de dados e desenvolvimento full stack.",
     icon: GraduationCap,
   },
   {
     school: "IFMG",
-    course: "Administração",
-    period: "2020 — 2022",
-    description: "Formação em gestão de processos, finanças, logística e administração de organizações — base para visão de negócio aplicada à tecnologia.",
+    course: "Bacharelado em Administração",
+    period: "2023 — 2027",
+    description: "Formação em gestão, finanças, processos e negócios — base sólida para visão estratégica aplicada a produtos e sistemas.",
+    icon: GraduationCap,
+  },
+  {
+    school: "SENAI CTTI MG",
+    course: "Programação Web",
+    period: "2023",
+    description: "Curso técnico de programação web: HTML, CSS, JavaScript, lógica de programação, Windows Server e projetos práticos de interface.",
     icon: GraduationCap,
   },
 ];

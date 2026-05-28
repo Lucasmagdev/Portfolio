@@ -21,7 +21,7 @@ export function About() {
                 <div className="mx-auto h-32 w-32 rounded-full bg-gradient-primary grid place-items-center text-5xl font-display font-bold shadow-[0_0_60px_oklch(0.58_0.22_27/0.6)]">
                   LE
                 </div>
-                <div className="mt-6 font-display text-xl font-semibold">Lucas Estevam</div>
+                <div className="mt-6 font-display text-xl font-semibold">Lucas Magalhães</div>
                 <div className="text-sm text-muted-foreground mt-1">Belo Horizonte · MG</div>
                 <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-[10px] font-mono uppercase tracking-widest">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
@@ -43,7 +43,7 @@ export function About() {
             className="space-y-5 text-muted-foreground text-base md:text-lg leading-relaxed"
           >
             <p>
-              Sou <span className="text-white font-medium">Analista de Sistemas e Inovação Jr</span> atuando no desenvolvimento de soluções corporativas, automações e transformação digital.
+              Sou <span className="text-white font-medium">Analista de Sistemas Full Stack</span> atuando no desenvolvimento de soluções corporativas, automações e transformação digital.
             </p>
             <p>
               Tenho experiência com <span className="text-white">React, Node.js, TypeScript, infraestrutura Linux, VPS, integrações</span> e construção de sistemas internos que rodam em produção.
