@@ -8,7 +8,7 @@ type IntroScreenProps = {
 type Phase = 'init' | 'reveal' | 'underline' | 'tagline' | 'fadeout'
 
 const TAGLINE = 'SISTEMAS · AUTOMAÇÃO · SAAS'
-const PRIMARY = '#d94f25'
+const PRIMARY = '#c9ff31'
 
 export function IntroScreen({ onDone }: IntroScreenProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -69,12 +69,12 @@ export function IntroScreen({ onDone }: IntroScreenProps) {
       const converging = elapsed > 2.5
 
       ctx.clearRect(0, 0, w, h)
-      ctx.fillStyle = '#080b12'
+      ctx.fillStyle = '#0b0c0c'
       ctx.fillRect(0, 0, w, h)
 
       // Subtle center radial fog
       const fog = ctx.createRadialGradient(w / 2, h / 2, 0, w / 2, h / 2, Math.min(w, h) * 0.55)
-      fog.addColorStop(0, 'rgba(217,79,37,0.055)')
+      fog.addColorStop(0, 'rgba(201,255,49,0.055)')
       fog.addColorStop(1, 'transparent')
       ctx.fillStyle = fog
       ctx.fillRect(0, 0, w, h)
@@ -106,7 +106,7 @@ export function IntroScreen({ onDone }: IntroScreenProps) {
 
         // Glow halo
         const halo = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 5.5)
-        halo.addColorStop(0, p.accent ? 'rgba(217,79,37,0.22)' : 'rgba(255,255,255,0.065)')
+        halo.addColorStop(0, p.accent ? 'rgba(201,255,49,0.22)' : 'rgba(255,255,255,0.065)')
         halo.addColorStop(1, 'transparent')
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.r * 5.5, 0, Math.PI * 2)

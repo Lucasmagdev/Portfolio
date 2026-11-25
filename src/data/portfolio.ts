@@ -4,12 +4,6 @@ import {
   Award, Network, Sparkles, Building2, ClipboardList, BarChart3,
 } from "lucide-react";
 
-export const heroStats = [
-  { label: "Projetos", value: 15, suffix: "+" },
-  { label: "Stacks", value: 25, suffix: "+" },
-  { label: "Anos de experiência", value: 3, suffix: "+" },
-];
-
 export const heroTechCards = [
   { name: "React 19", color: "from-cyan-500/20 to-blue-500/20" },
   { name: "Node.js", color: "from-emerald-500/20 to-green-500/20" },
@@ -87,18 +81,60 @@ export const projects = [
 
 export const experiences = [
   {
-    role: "Analista de Sistemas Full Stack",
-    company: "Gontijo Fundações S.A.",
-    period: "Out 2025 — Atual",
-    description: "Desenvolvimento full stack com React, Node.js e integrações via APIs. Deploy e gerenciamento em DigitalOcean Droplets. Automações com IA, mapeamento de processos internos, sistemas operacionais e digitalização de rotinas da empresa.",
+    role: "Líder de Sistemas e Inovação",
+    company: "Gontijo Fundações S.A. · Belo Horizonte, MG",
+    period: "Out 2026 — Atual",
+    bullets: [
+      "Coordeno a equipe de sistemas, distribuindo as demandas e acompanhando as entregas",
+      "Planejo a evolução dos sistemas da empresa, ouvindo as áreas e definindo prioridades e arquitetura",
+      "Sigo desenvolvendo os sistemas internos, do back-end ao front-end",
+      "Cuido da manutenção do servidor e garanto que os sistemas fiquem no ar e funcionando bem",
+      "Administro o ambiente Microsoft 365/Azure e a intranet corporativa no SharePoint",
+    ],
     icon: Cpu,
   },
   {
-    role: "Técnico Administrativo IV",
-    company: "Gontijo Fundações S.A.",
-    period: "Dez 2023 — Out 2025",
-    description: "Análise de dados e relatórios para tomada de decisão. Mapeamento e melhoria de processos (PDCA), indicadores de performance operacional e apoio na digitalização de rotinas internas.",
+    role: "Analista de Sistemas Full Stack",
+    company: "Gontijo Fundações S.A. · Belo Horizonte, MG",
+    period: "Set 2025 — Set 2026",
+    bullets: [
+      "Desenvolvi aplicações web com Node.js (NestJS) no back-end e React com Tailwind no front-end",
+      "Criei APIs REST, recursos em tempo real (WebSockets) e filas assíncronas com RabbitMQ e Bull",
+      "Participei da arquitetura de microsserviços, com serviços compartilhados de autenticação, logs e notificações",
+      "Modelei bancos de dados PostgreSQL com TypeORM e usei Redis para cache",
+      "Documentei APIs (Swagger/OpenAPI), padronizei o código e fiz o deploy em nuvem com Docker",
+      "Trabalhei com as equipes de produto e design no levantamento de requisitos e em propostas de melhoria",
+    ],
+    icon: Code2,
+  },
+  {
+    role: "Técnico Administrativo",
+    company: "Gontijo Fundações S.A. · Belo Horizonte, MG",
+    period: "Dez 2023 — Ago 2025",
+    bullets: [
+      "Montei relatórios e análises que apoiavam as decisões da gestão",
+      "Mapeei processos administrativos e apontei melhorias e integrações entre as áreas",
+      "Criei indicadores de desempenho operacional com apoio de SQL",
+      "Digitalizei rotinas operacionais, aplicando o ciclo PDCA de melhoria contínua",
+    ],
     icon: Workflow,
+  },
+  {
+    role: "Auxiliar de Escritório",
+    company: "Maurício Imóveis · Jaboticatubas, MG",
+    period: "Abr 2022 — Mar 2023",
+    bullets: ["Dei suporte aos usuários no dia a dia e fiz a manutenção de computadores e servidores"],
+    icon: Briefcase,
+  },
+];
+
+export const skills = [
+  { title: "Back-end", items: ["Node.js (NestJS, AdonisJS)", "APIs REST", "WebSockets", "RabbitMQ", "Bull", "OAuth / JWT"] },
+  { title: "Front-end e mobile", items: ["React", "Tailwind CSS", "React Native"] },
+  { title: "Banco de dados", items: ["PostgreSQL", "Redis", "SQL", "TypeORM", "Lucid"] },
+  {
+    title: "Infra e ferramentas",
+    items: ["Docker", "AWS", "Microsserviços", "Microsoft 365 / Azure", "Swagger / OpenAPI", "ESLint", "Prettier"],
   },
 ];
 
@@ -114,22 +150,22 @@ export const certifications = [
 export const education = [
   {
     school: "PUC Minas",
-    course: "Análise e Desenvolvimento de Sistemas",
-    period: "2025 — Cursando",
-    description: "Graduação em ADS com foco em engenharia de software, arquitetura de sistemas, banco de dados e desenvolvimento full stack.",
+    course: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+    period: "Ago 2025 — em andamento",
+    description: "Tecnólogo com foco em engenharia de software, arquitetura de sistemas, banco de dados e desenvolvimento full stack.",
     icon: GraduationCap,
   },
   {
     school: "IFMG",
     course: "Bacharelado em Administração",
-    period: "2023 — 2027",
+    period: "Abr 2023 — Abr 2027 (previsão)",
     description: "Formação em gestão, finanças, processos e negócios — base sólida para visão estratégica aplicada a produtos e sistemas.",
     icon: GraduationCap,
   },
   {
     school: "SENAI CTTI MG",
     course: "Programação Web",
-    period: "2023",
+    period: "Fev 2023 — Dez 2023",
     description: "Curso técnico de programação web: HTML, CSS, JavaScript, lógica de programação, Windows Server e projetos práticos de interface.",
     icon: GraduationCap,
   },

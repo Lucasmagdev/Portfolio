@@ -1,94 +1,68 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#hero", label: "Início" },
-  { href: "#sobre", label: "Sobre" },
-  { href: "#stack", label: "Stack" },
-  { href: "#projetos", label: "Projetos" },
-  { href: "#experiencia", label: "Experiência" },
-  { href: "#contato", label: "Contato" },
+  { href: "#sobre", label: "sobre" },
+  { href: "#projetos", label: "projetos" },
+  { href: "#experiencia", label: "experiência" },
+  { href: "#formacao", label: "formação" },
+  { href: "#diferencial", label: "tecnologias" },
+  { href: "#contato", label: "contato" },
 ];
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <motion.header
-      initial={{ y: -40, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? "py-3" : "py-5"
-      }`}
-    >
-      <div className="mx-auto max-w-7xl px-6">
-        <div
-          className={`flex items-center justify-between rounded-2xl px-5 py-3 transition-all ${
-            scrolled ? "glass-card shadow-2xl" : ""
-          }`}
-        >
-          <a href="#hero" className="group flex flex-col leading-tight">
-            <span className="font-display font-bold text-sm text-white/90 group-hover:text-white transition-colors">Lucas Magalhães</span>
-            <span className="hidden sm:block text-[10px] text-muted-foreground font-mono tracking-wide">Analista de Sistemas e Inovação Jr · Full Stack Dev</span>
-          </a>
+    <header className="fixed top-0 inset-x-0 z-50 border-b border-line bg-background/90 backdrop-blur-md">
+      <div className="mx-auto max-w-[1440px] h-16 px-6 md:px-16 flex items-center justify-between gap-6">
+        <a href="#hero" className="flex items-center gap-3 group" aria-label="Lucas Magalhães — início">
+          <span className="font-pixel text-2xl leading-none border border-foreground px-1.5 py-1 group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors">
+            LM
+          </span>
+        </a>
 
-          <nav className="hidden md:flex items-center gap-1">
-            {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-white/5"
-              >
-                {l.label}
-              </a>
-            ))}
-          </nav>
+        <nav className="hidden md:flex items-center gap-10 text-xs font-bold">
+          {links.map((l) => (
+            <a key={l.href} href={l.href} className="hover:text-primary transition-colors">
+              {l.label}
+            </a>
+          ))}
+        </nav>
 
+        <div className="hidden md:flex items-center gap-6">
           <a
             href="#contato"
-            className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-primary text-sm font-medium hover:shadow-[0_0_24px_oklch(0.58_0.22_27/0.6)] transition-all"
+            className="text-xs font-bold px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
           >
-            Vamos conversar
+            vamos conversar
           </a>
-
-          <button
-            onClick={() => setOpen(!open)}
-            className="md:hidden p-2 rounded-lg glass"
-            aria-label="Menu"
-          >
-            {open ? <X size={18} /> : <Menu size={18} />}
-          </button>
         </div>
 
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="md:hidden mt-2 glass-card rounded-2xl p-4 flex flex-col gap-1"
-          >
-            {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="px-3 py-2 text-sm rounded-lg hover:bg-white/5"
-              >
-                {l.label}
-              </a>
-            ))}
-          </motion.div>
-        )}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden p-2 border border-border"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
+        >
+          {open ? <X size={16} /> : <Menu size={16} />}
+        </button>
       </div>
-    </motion.header>
+
+      {open && (
+        <nav className="md:hidden border-t border-line bg-background px-6 py-2 flex flex-col">
+          {links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={() => setOpen(false)}
+              className="py-3 text-sm font-bold border-b border-line last:border-0 hover:text-primary"
+            >
+              {l.label}
+            </a>
+          ))}
+        </nav>
+      )}
+    </header>
   );
 }
