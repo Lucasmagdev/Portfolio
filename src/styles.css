@@ -6,7 +6,7 @@
 
 @theme inline {
   --font-sans: 'Roboto Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
-  --font-display: 'DotGothic16', 'Roboto Mono', monospace;
+  --font-display: 'Pixelify Sans', 'Roboto Mono', monospace;
   --font-mono: 'Roboto Mono', ui-monospace, monospace;
 
   /* terminal / brutalist: no rounded corners (rounded-full stays) */

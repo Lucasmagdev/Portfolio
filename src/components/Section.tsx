@@ -14,7 +14,7 @@ export function Section({
   eyebrow?: string;
   title?: ReactNode;
   description?: string;
-  children: ReactNode;
+  children?: ReactNode;
 }) {
   return (
     <section id={id} className="relative border-t border-line scroll-mt-16">
@@ -25,7 +25,7 @@ export function Section({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
-            className="mb-12 md:mb-16"
+            className={children ? "mb-12 md:mb-16" : undefined}
           >
             {eyebrow && (
               <div className="label flex items-center gap-3 mb-6">

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowDown, ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { socials } from "@/data/portfolio";
 
 const featured = [
@@ -118,10 +118,6 @@ export function Hero() {
               <span className="flex items-center gap-2 text-primary font-bold">
                 <span className="h-1.5 w-1.5 bg-primary animate-blink" />
                 disponível para projetos
-              </span>
-              <span className="text-foreground/20">|</span>
-              <span className="flex items-center gap-1.5 text-foreground/60">
-                <MapPin size={12} /> baseado no brasil
               </span>
               <span className="text-foreground/20">|</span>
               <span className="text-foreground/50">UTC −3</span>
