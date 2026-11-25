@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/sections/Hero";
@@ -16,7 +15,6 @@ import { Skills } from "@/components/sections/Skills";
 import { Differentials } from "@/components/sections/Differentials";
 import { Footer } from "@/components/sections/Footer";
 import { BackToTop } from "@/components/BackToTop";
-import { IntroScreen } from "@/components/IntroScreen";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,22 +31,8 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const [showIntro, setShowIntro] = useState(false);
-
-  useEffect(() => {
-    const force = new URLSearchParams(window.location.search).get("introPreview") === "1";
-    const seen = sessionStorage.getItem("portfolio-intro-seen") === "1";
-    if (force || !seen) setShowIntro(true);
-  }, []);
-
-  function handleIntroDone() {
-    sessionStorage.setItem("portfolio-intro-seen", "1");
-    setShowIntro(false);
-  }
-
   return (
     <>
-      {showIntro && <IntroScreen onDone={handleIntroDone} />}
       <div className="relative min-h-screen text-foreground overflow-x-hidden">
         <Navbar />
         <main>
